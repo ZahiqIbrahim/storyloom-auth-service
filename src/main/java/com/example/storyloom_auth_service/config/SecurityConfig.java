@@ -43,7 +43,7 @@ public class SecurityConfig {
         http.cors(Customizer.withDefaults())
                 .csrf(customizer -> customizer.disable())
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("/register")
+                        .requestMatchers("/register","/verify","/login")
                         .permitAll()
                         .anyRequest().authenticated())
                 .logout(logout -> logout.disable());

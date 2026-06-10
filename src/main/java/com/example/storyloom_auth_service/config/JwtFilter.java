@@ -1,5 +1,7 @@
 package com.example.storyloom_auth_service.config;
 
+import com.example.storyloom_auth_service.service.jwt.JwtService;
+import com.example.storyloom_auth_service.service.user.MyUserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
