@@ -165,4 +165,16 @@ public class UserController {
         return ResponseEntity.ok(Map.of("message", "Logout successful!"));
     }
 
+//    @PostMapping("/health")
+//    public ResponseEntity<?> healthCheck(HttpServletRequest request){
+//        try{
+//
+//            return ResponseEntity.ok("health is good!");
+//
+//        }catch (Exception e){
+//            return ResponseEntity.status(401).body(Map.of("Error",e.getMessage()));
+//        }
+//
+//    }
+
 }

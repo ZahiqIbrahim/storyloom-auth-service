@@ -36,6 +36,7 @@ public class User {
     private String email;
 
    // @NotBlank(message = "Phone number required")
+    @Column(nullable = false)
     private String phone;
     private Boolean emailVerified = false;
     private String verificationOtp;
