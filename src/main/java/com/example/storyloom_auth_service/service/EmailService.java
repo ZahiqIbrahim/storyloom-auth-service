@@ -24,7 +24,7 @@ public class EmailService {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(adminEmail);
         message.setTo(toEmail);
-        message.setSubject("VaultPay - Email Verification");
+        message.setSubject("StoryLoom - Email Verification");
         message.setText("Your OTP for email verification is: " + otp +
                 "\n\nThis OTP will expire in 5 minutes." +
                 "\n\nIf you didn't request this, please ignore.");
@@ -37,7 +37,7 @@ public class EmailService {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(adminEmail);
         message.setTo(toEmail);
-        message.setSubject("VaultPay - Reset Password");
+        message.setSubject("StoryLoom - Reset Password");
         message.setText("Your OTP for Password Reset is: "+ otp +
                 "\n\nThis OTP will expire in 5 minutes." +
                 "\n\nIf you didn't request this, please ignore.");
@@ -49,7 +49,7 @@ public class EmailService {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(adminEmail);
         message.setTo(toEmail);
-        message.setSubject("VaultPay - Email Verification");
+        message.setSubject("StoryLoom - Email Verification");
         message.setText("Your OTP for Setting the pin is: " + otp +
                 "\n\nThis OTP will expire in 5 minutes." +
                 "\n\nIf you didn't request this, please ignore.");
