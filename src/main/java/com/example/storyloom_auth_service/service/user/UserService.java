@@ -33,9 +33,13 @@ public class UserService {
     @Transactional
     public User registerUser(User user) {
 
-        // Check if email already exists
-        if (repo.existsByEmail(user.getEmail())) {
-            throw new RuntimeException("Email already registered");
+        // Check if email already exists and if its verified
+        if (repo.existsByEmail(user.getEmail()) ) {
+            User dbUser = repo.findByEmail(user.getEmail()).orElseThrow(()-> new RuntimeException("User not found"));
+            if(dbUser.getEmailVerified()){
+                throw new RuntimeException("Email already registered");
+            }
+
         }
 
         // Check if username already exists
